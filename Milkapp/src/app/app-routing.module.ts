@@ -18,6 +18,12 @@ import { ProfileComponent } from './dashboard/profile/profile.component';
 import { SellerlistComponent } from './dashboard/sellerlist/sellerlist.component';
 import { EnquiryComponent } from './dashboard/enquiry/enquiry.component';
 import { AdminauthorGuard } from './navbar/adminauthor.guard';
+import { SellerdashboardComponent } from './sellerdashboard/sellerdashboard.component';
+import { SellerauthorGuard } from './navbar/sellerauthor.guard';
+import { Home3Component } from './sellerdashboard/home3/home3.component';
+import { PaymentsComponent } from './sellerdashboard/payments/payments.component';
+import { UserprofileComponent } from './sellerdashboard/userprofile/userprofile.component';
+import { MilkrecordsComponent } from './sellerdashboard/milkrecords/milkrecords.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navbar',pathMatch:'full'},
@@ -43,6 +49,13 @@ const routes: Routes = [
       {path:'profile',component:ProfileComponent},
       {path:'sellerlist',component:SellerlistComponent},
       {path:'enquiry',component:EnquiryComponent}
+    ]},
+    {path:'selldash',component:SellerdashboardComponent,canActivate:[SellerauthorGuard],children:[
+      {path:'',redirectTo:'home3',pathMatch:'full'},
+      {path:'home3',component:Home3Component},
+      {path:'payments',component:PaymentsComponent},
+      {path:'profiles',component:UserprofileComponent},
+      {path:'records',component:MilkrecordsComponent}
     ]}
 ];
 

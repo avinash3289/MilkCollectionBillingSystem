@@ -24,6 +24,11 @@ import { PaymentComponent } from './dashboard/payment/payment.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { SellerlistComponent } from './dashboard/sellerlist/sellerlist.component';
 import { EnquiryComponent } from './dashboard/enquiry/enquiry.component';
+import { SellerdashboardComponent } from './sellerdashboard/sellerdashboard.component';
+import { Home3Component } from './sellerdashboard/home3/home3.component';
+import { MilkrecordsComponent } from './sellerdashboard/milkrecords/milkrecords.component';
+import { PaymentsComponent } from './sellerdashboard/payments/payments.component';
+import { UserprofileComponent } from './sellerdashboard/userprofile/userprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +48,12 @@ import { EnquiryComponent } from './dashboard/enquiry/enquiry.component';
     PaymentComponent,
     ProfileComponent,
     SellerlistComponent,
-    EnquiryComponent
+    EnquiryComponent,
+    SellerdashboardComponent,
+    Home3Component,
+    MilkrecordsComponent,
+    PaymentsComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,

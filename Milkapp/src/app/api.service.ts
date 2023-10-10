@@ -90,6 +90,11 @@ public getall(k2:any):Observable<any>{
   return this.http.get("http://localhost:3000/getall/"+k2);
 }
 
- 
+public checkUserCode(x):Observable<any>{
+  var data={};
+  data['uname']=sessionStorage.getItem('uname');
+  data['ucode']=x;
+  return this.http.get('http://localhost:3000/checkucode',{params:data});
+}
 
 }
