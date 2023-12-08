@@ -39,7 +39,7 @@ body{
 }
 form .user .input{
     margin-bottom: 15px;
-    width: calc(100%14-20px);
+    width: max-content;
 }
 .user .input .details{
     display:block;
